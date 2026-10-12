@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #e6f5ee, #e9edff);
+    color: #172b3a;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 460px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(30, 65, 75, 0.13);
+    animation: appear 0.6s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 14px;
+    border-radius: 18px;
+    background: #dff7e9;
+    color: #168453;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p,
+.result-row p {
+    color: #83909c;
+    font-size: 13px;
+}
+
+.form-group {
+    margin-bottom: 23px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #dce5e9;
+    border-radius: 11px;
+    background: #f9fbfc;
+    font-size: 16px;
+    color: #172b3a;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #20a36a;
+    box-shadow: 0 0 0 3px rgba(32, 163, 106, 0.12);
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 9px;
+    margin-bottom: 17px;
+}
+
+.tip-buttons button,
+.people-control button {
+    border: 1px solid #dce5e9;
+    background: #f5f8f9;
+    border-radius: 10px;
+    padding: 12px 5px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tip-buttons button:hover,
+.people-control button:hover {
+    border-color: #20a36a;
+    color: #168453;
+}
+
+.tip-buttons button.active {
+    background: #168453;
+    color: white;
+    border-color: #168453;
+}
+
+.custom-label {
+    font-size: 12px;
+    color: #667580;
+}
+
+.people-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.people-control button {
+    min-width: 46px;
+    font-size: 23px;
+}
+
+.people-control input {
+    text-align: center;
+    font-weight: 700;
+}
+
+.results {
+    border-top: 1px solid #e8eef0;
+    padding-top: 22px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.result-row h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.result-row strong {
+    font-size: 17px;
+    color: #168453;
+    text-align: right;
+}
+
+.per-person {
+    background: #e7f8ee;
+    border: 1px solid #d4f0df;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.per-person p {
+    color: #47715c;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.per-person h2 {
+    color: #117746;
+    font-size: 32px;
+    overflow-wrap: anywhere;
+}
+
+.error {
+    color: #d52f43;
+    font-size: 13px;
+    margin: -7px 0 14px;
+}
+
+.reset-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #172b3a;
+    color: white;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reset-btn:hover {
+    background: #28485a;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    margin-top: 22px;
+    color: #94a1a9;
+    font-size: 12px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+    }
+
+    .calculator {
+        padding: 23px 18px;
+        border-radius: 19px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .per-person h2 {
+        font-size: 28px;
+    }
+}
